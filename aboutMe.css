@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 239, 242, 0.89);
+    color: black;
+    line-height: 1.6;
+    font-family: "Noto Serif Thai", serif;
+}
+
+.container {
+    background-color: #a7d3f7e0;
+}
+
+/* ===== Header ===== */
+.site-header {
+ background: linear-gradient(90deg, #102C57, #1679AB, #86caf8);    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.brand {
+    color: white;
+}
+
+.brand-text h2 {
+    font-size: 36px;
+    margin-left: 10px;
+}
+
+.brand-text p {
+    font-size: 20px;
+    opacity: 0.85;
+    margin-left: 10px;
+}
+
+/* ===== Navigation ===== */
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.nav-list a {
+    display: inline-block;
+    color: #012957;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: linear-gradient(
+        90deg,
+        #FBEFEF,
+#F9DFDF,
+#F5AFAF
+    );
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== Main ===== */
+.about-main {
+    flex: 1;
+    width: 100%;
+    padding: 24px;
+}
+
+.about-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px;
+
+    background: linear-gradient(100deg, white, #cfe3f3);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(105, 105, 105, 0.4);
+}
+
+.about-container > h1 {
+    text-align: center;
+    color: #034982;
+    font-size: 32px;
+}
+
+.about-subtitle {
+    text-align: center;
+    color: #023157;
+    margin-bottom: 24px;
+}
+
+/* ===== Information Sections ===== */
+.about-section {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 10px;
+}
+
+.about-section h2 {
+    color: #034982;
+    font-size: 22px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid tomato;
+}
+
+.about-section p {
+    color: #023157;
+    margin-bottom: 8px;
+    overflow-wrap: break-word;
+}
+
+.about-section h3 {
+    color: #034982;
+    margin-bottom: 8px;
+}
+
+/* ===== Education Card ===== */
+.about-card {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    background-color: #FBEFEF;
+    border-radius: 6px;
+}
+
+/* ===== Interest List ===== */
+.about-list {
+    background: rgba(255, 255, 255, 0.7);
+    background-color: #FBEFEF;
+    border-radius: 6px;
+    padding-left: 24px;
+    color: #023157;
+}
+
+.about-list li {
+    
+    margin-bottom: 8px;
+    overflow-wrap: break-word;
+}
+
+/* ===== Footer ===== */
+footer {
+    margin-top: auto;
+    background: linear-gradient(90deg, #032081, #5898f8, #86caf8);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ===== iPad / Tablet ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .site-header {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .nav-list {
+        gap: 8px;
+    }
+
+    .nav-list a {
+        padding: 10px 12px;
+    }
+
+    .about-main {
+        padding: 16px;
+    }
+
+    .about-container {
+        width: 95%;
+        padding: 24px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .brand-text h2 {
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    .brand-text p {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    .nav-list {
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .nav-list a {
+        padding: 8px 10px;
+    }
+
+    .about-main {
+        padding: 12px;
+    }
+
+    .about-container {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .about-container > h1 {
+        font-size: 26px;
+    }
+
+    .about-section {
+        padding: 12px;
+        margin-bottom: 16px;
+    }
+
+    .about-section h2 {
+        font-size: 19px;
+    }
+
+    .about-section p,
+    .about-list {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 1.25rem;
+    }
+}
+
+/* ===== Small Mobile ===== */
+@media (max-width: 480px) {
+    .brand-text h2 {
+        font-size: 24px;
+    }
+
+    .nav-list {
+        gap: 6px;
+    }
+
+    .nav-list a {
+        font-size: 12px;
+        padding: 7px 8px;
+    }
+
+    .about-container {
+        padding: 12px;
+    }
+
+    .about-container > h1 {
+        font-size: 22px;
+    }
+
+    .about-section h2 {
+        font-size: 17px;
+    }
+}
